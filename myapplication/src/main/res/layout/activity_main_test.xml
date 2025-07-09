@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.myapplication.MainActivityTest"
+    tools:ignore="MissingDefaultResource">
+
+    <Button
+        android:id="@+id/installImgFs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1imagefs安装"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/createContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2创建默认container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/installImgFs" />
+
+    <Button
+        android:id="@+id/defaultStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3启动虚拟机"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createContainer" />
+
+    <TextView
+        android:id="@+id/imgfsInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="环境未初始化"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/defaultStart" />
+
+    <Button
+        android:id="@+id/extraGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="解压PVZ游戏文件"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgfsInfo" />
+
+    <Button
+        android:id="@+id/startPVZ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="启动游戏(PVZ)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/extraGame" />
+
+    <TextView
+        android:id="@+id/gameInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="游戏未安装"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/startPVZ" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

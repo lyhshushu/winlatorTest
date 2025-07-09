@@ -1,0 +1,56 @@
+pluginManagement {
+    repositories {
+        maven { url 'http://maven.4399doc.com/repository/maven-public'
+            allowInsecureProtocol = true
+        }
+        maven {
+            url 'http://storage.googleapis.com/r8-releases/raw'
+            allowInsecureProtocol = true
+        }
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        maven { url 'http://maven.4399doc.com/repository/maven-public'
+            allowInsecureProtocol = true
+        }
+        google()
+        mavenCentral()
+        flatDir {
+            dirs 'myapplication/libs'
+        }
+    }
+}
+
+buildscript {
+    repositories {
+        maven { url 'http://maven.4399doc.com/repository/maven-public'
+            allowInsecureProtocol = true
+        }
+        maven {
+            url 'http://storage.googleapis.com/r8-releases/raw'
+            allowInsecureProtocol = true
+        }
+        maven {
+            setUrl("https://jitpack.io")
+            content {
+                includeGroup("com.github.aasitnikov")
+            }
+        }
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:8.2.0"
+        classpath 'com.github.aasitnikov:fat-aar-android:1.4.0'
+    }
+}
+
+rootProject.name = "WinlatorTest"
+include ':app'
+include ':lib-winlator'
+include ':myapplication'
